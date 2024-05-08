@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class Login extends StatelessWidget {
-  const Login({Key? key}) : super(key: key);
+class Register extends StatelessWidget {
+  const Register({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +59,7 @@ class Login extends StatelessWidget {
                 child: Column(
                   children: [
                     const Padding(
-                      padding: EdgeInsets.only(top: 20, bottom: 20),
+                      padding: EdgeInsets.only( bottom: 20),
                       child: Text(
                         ' ',
                         style: TextStyle(
@@ -74,9 +74,49 @@ class Login extends StatelessWidget {
                           color: Colors.white.withOpacity(0.0),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.all(16.0),
+                          padding: const EdgeInsets.all(10.0),
                           child: Column(
                             children: [
+                              const Center(
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment
+                                      .center, // Centraliza horizontalmente
+                                  children: [
+                                    Text(
+                                      'Nome',
+                                      style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                        color:
+                                            Colors.white, // Altere para branco
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              const SizedBox(height: 8),
+                              Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.white.withOpacity(1),
+                                  borderRadius: BorderRadius.circular(5),
+                                ),
+                                child: const TextField(
+                                  decoration: InputDecoration(
+                                    prefixIcon: Icon(
+                                      FontAwesomeIcons.user,
+                                      color: Colors.black,
+                                    ),
+                                    hintText: 'Seu nome...',
+                                    hintStyle: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.black,
+                                    ),
+                                    border: InputBorder.none,
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(height: 20),
                               const Center(
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment
@@ -103,7 +143,7 @@ class Login extends StatelessWidget {
                                 child: const TextField(
                                   decoration: InputDecoration(
                                     prefixIcon: Icon(
-                                      FontAwesomeIcons.user,
+                                      FontAwesomeIcons.envelope,
                                       color: Colors.black,
                                     ),
                                     hintText: 'Seu e-mail...',
@@ -169,7 +209,7 @@ class Login extends StatelessWidget {
                                 ),
                                 child: const Center(
                                   child: Text(
-                                    'Logar',
+                                    'Registrar',
                                     style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 18,
